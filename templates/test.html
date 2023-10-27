@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="/static/style.css">
+  <title>Yolov7을 통한 도로파손 및 물체감지</title>
+</head>
+
+<body class="text-center"> 
+  <form class="form-signin card mb-6" method=post enctype=multipart/form-data>
+    <h1 class="h3 mb-3 font-weight-normal">이미지</h1>
+    <input type="file" name="file" class="form-control-file" id="inputfile">
+    <br />
+    <button>
+      <span class="box">
+        Upload
+      </span>
+    </button>
+  </form>
+</body>
+
+</html>
+
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="/static/style.css">
+  <title>Yolov7을 통한 도로파손 및 물체감지</title>
+</head>
+
+<body class="text-center">
+  <form class="form-signin card_res mb-6" method=post enctype=multipart/form-data>
+    <h1 class="h3 mb-3 font-weight-normal">예측결과</h1>
+    <img class="img-fluid" src={{ url_for('static', filename=result_image ) }} alt="User_Image" style="max-width: 100%; height: auto;">
+    <button class="btn mb-4"> 다른 이미지 테스트</button>
+  </form>
+</body>
+</html>

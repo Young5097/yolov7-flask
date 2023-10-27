@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/static/style.css">
+  <title>Yolov7을 통한 도로파손 및 물체감지</title>
+  <script>
+    function previewImage() {
+      var fileInput = document.getElementById('file-input');
+      var imagePreview = document.getElementById('image-preview');
+
+      var file = fileInput.files[0];
+
+      if (file) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+          imagePreview.src = e.target.result;
+          imagePreview.style.display = 'block';
+        };
+        reader.readAsDataURL(file);
+      }
+    }
+  </script>
+</head>
+
+
+<body>
+  <div class="container">
+    <h1>Yolov7 도로탐지봇</h1>
+    <p class='text1'>도로사진을 업로드 해주세요!</p>
+    <form action="/" method="post" enctype="multipart/form-data">
+        <label for="file-input" class="custom-upload">Select Image</label>
+        <input type="file" id="file-input" name="file" accept="image/*" onchange="previewImage()" style="display: none;">
+        <img id="image-preview" alt="Selected Image">
+        <input type="submit" value="Upload">
+    </form>
+  </div>
+</body>
+</html>
